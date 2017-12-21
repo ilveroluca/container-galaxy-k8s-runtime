@@ -201,7 +201,7 @@ assignment:
   max_pod_retrials: 3
   tools_id:
   - metfrag-vis
-- docker_image_override: container-passatutto
+- docker_image_override: passatutto
   docker_owner_override: phnmnl
   docker_repo_override: container-registry.phenomenal-h2020.eu
   docker_tag_override: dev_v201604_cv0.1.7
@@ -223,17 +223,20 @@ assignment:
   tools_id:
   - Multivariate
 - docker_image_override: mtblisa
-  docker_owner_override: phnmnl
-  docker_repo_override: container-registry.phenomenal-h2020.eu
-  docker_tag_override: v0.8.0_cv0.5.44
+  docker_owner_override: luca
+  docker_repo_override: 
+  #docker_tag_override: v0.8.0_cv0.5.44
+  docker_tag_override: latest
   max_pod_retrials: 3
   tools_id:
-  - get_study
-  - get_study_json
-  - study_factor_values
-  - study_factors
-  - data_files
-  - factors_summary
+    - data_files
+    - factors_summary
+    - get_study_json
+    - luca_isa_study
+    - luca_isa_study_archive
+    - study_factor_values
+    - study_factors
+
 - docker_image_override: metfrag-cli-batch
   docker_owner_override: phnmnl
   docker_repo_override: container-registry.phenomenal-h2020.eu

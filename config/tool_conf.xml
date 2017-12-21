@@ -228,6 +228,15 @@
   </section>
 
   <section name="ISA tools" id="isa-tools">
+    <tool file="phenomenal/isaluca/get_study.xml"/>
+    <tool file="phenomenal/isaluca/data_files.xml"/>
+    <tool file="phenomenal/isaluca/factors_summary.xml"/>
+    <tool file="phenomenal/isaluca/get_study_json.xml"/>
+    <tool file="phenomenal/isaluca/isa_study.xml"/>
+    <tool file="phenomenal/isaluca/isa_study_archive.xml"/>
+    <tool file="phenomenal/isaluca/study_factor_values.xml"/>
+    <tool file="phenomenal/isaluca/study_factors.xml"/>
+
     <tool file="phenomenal/isatools/get_study.xml"/>
     <tool file="phenomenal/isatools/get_study_json.xml"/>
     <tool file="phenomenal/isatools/study_factors.xml"/>

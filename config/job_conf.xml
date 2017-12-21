@@ -76,14 +76,6 @@
       <param id="max_pod_retrials">3</param>
       <param id="docker_enabled">true</param>
     </destination>
-    <destination id="metabolab-container" runner="k8s">
-      <param id="docker_repo_override">container-registry.phenomenal-h2020.eu</param>
-      <param id="docker_owner_override">phnmnl</param>
-      <param id="docker_image_override">metabolab</param>
-      <param id="docker_tag_override">v0.99.8.8_cv0.6.65</param>
-      <param id="max_pod_retrials">3</param>
-      <param id="docker_enabled">true</param>
-    </destination>
     <destination id="papy-container" runner="k8s">
       <param id="docker_enabled">true</param>
     </destination>      
@@ -191,22 +183,14 @@
       <param id="max_pod_retrials">3</param>
       <param id="docker_enabled">true</param>
     </destination>
-    <destination id="metfrag-cli-batch-container" runner="k8s">
+		<!--<destination id="metfrag-cli-batch-container" runner="k8s">
       <param id="docker_repo_override">container-registry.phenomenal-h2020.eu</param>
       <param id="docker_owner_override">phnmnl</param>
       <param id="docker_image_override">metfrag-cli-batch</param>
       <param id="docker_tag_override">latest</param>
       <param id="max_pod_retrials">3</param>
       <param id="docker_enabled">true</param>
-    </destination>
-    <destination id="container-mtblisa" runner="k8s">
-      <param id="docker_repo_override">container-registry.phenomenal-h2020.eu</param>
-      <param id="docker_owner_override">phnmnl</param>
-      <param id="docker_image_override">mtblisa</param>
-      <param id="docker_tag_override">v0.8.0_cv0.5.44</param>
-      <param id="max_pod_retrials">3</param>
-      <param id="docker_enabled">true</param>
-    </destination>
+		</destination>-->
     <destination id="container-isatab-validator" runner="k8s">
       <param id="docker_repo_override">container-registry.phenomenal-h2020.eu</param>
       <param id="docker_owner_override">phnmnl</param>
@@ -223,22 +207,6 @@
       <param id="max_pod_retrials">3</param>
       <param id="docker_enabled">true</param>
     </destination>
-    <destination id="metfrag-vis-container" runner="k8s">
-      <param id="docker_repo_override">container-registry.phenomenal-h2020.eu</param>
-      <param id="docker_owner_override">phnmnl</param>
-      <param id="docker_image_override">metfrag-vis</param>
-      <param id="docker_tag_override">v0.1_cv0.1.12</param>
-      <param id="max_pod_retrials">3</param>
-      <param id="docker_enabled">true</param>
-    </destination>
-    <destination id="container-escher-fluxomics" runner="k8s">
-      <param id="docker_repo_override">container-registry.phenomenal-h2020.eu</param>
-      <param id="docker_owner_override">phnmnl</param>
-      <param id="docker_image_override">escher-fluxomics</param>
-      <param id="docker_tag_override">v1.6.0-beta.4_cv1.0.9</param>
-      <param id="max_pod_retrials">3</param>
-      <param id="docker_enabled">true</param>
-    </destination>
     <destination id="container-mw2isa" runner="k8s">
       <param id="docker_repo_override">container-registry.phenomenal-h2020.eu</param>
       <param id="docker_owner_override">phnmnl</param>
@@ -247,22 +215,22 @@
       <param id="max_pod_retrials">1</param>
       <param id="docker_enabled">true</param>
     </destination>
-    <destination id="msnbase-container" runner="k8s">
+		<!--<destination id="msnbase-container" runner="k8s">
       <param id="docker_repo_override">container-registry.phenomenal-h2020.eu</param>
       <param id="docker_owner_override">phnmnl</param>
       <param id="docker_image_override">msnbase</param>
       <param id="docker_tag_override">latest</param>
       <param id="max_pod_retrials">1</param>
       <param id="docker_enabled">true</param>
-    </destination>
-    <destination id="container-passatutto" runner="k8s">
+		</destination>-->
+		<!--<destination id="container-passatutto" runner="k8s">
       <param id="docker_repo_override">container-registry.phenomenal-h2020.eu</param>
       <param id="docker_owner_override">phnmnl</param>
       <param id="docker_image_override">passatutto</param>
       <param id="docker_tag_override">latest</param>
       <param id="max_pod_retrials">1</param>
       <param id="docker_enabled">true</param>
-    </destination>
+		</destination>-->
     <destination id="container-isatab2json" runner="k8s">
       <param id="docker_repo_override">container-registry.phenomenal-h2020.eu</param>
       <param id="docker_owner_override">phnmnl</param>
@@ -465,12 +433,29 @@
     <tool id="aggregatemetfrag" destination="dynamic-k8s-medium" />
     <tool id="passatutto" destination="dynamic-k8s-medium" />
     <!-- ISA related tools -->
+    <tool id="data_files" destination="dynamic-k8s-small" resources="all"/>
+    <tool id="factors_summary" destination="dynamic-k8s-small" resources="all"/>
+    <tool id="get_study" destination="dynamic-k8s-small" resources="all"/>
+    <tool id="get_study_json" destination="dynamic-k8s-small" resources="all"/>
+    <tool id="study_factor_values" destination="dynamic-k8s-small" resources="all"/>
+    <tool id="study_factors" destination="dynamic-k8s-small" resources="all"/>
+
+    <tool id="data_files"             destination="dynamic-k8s-small" resources="all" />
+    <tool id="factors_summary"        destination="dynamic-k8s-small" resources="all" />
+    <tool id="get_study_json"         destination="dynamic-k8s-small" resources="all" />
+    <tool id="luca_isa_study"         destination="dynamic-k8s-small" resources="all" />
+    <tool id="luca_isa_study_archive" destination="dynamic-k8s-small" resources="all" />
+    <tool id="study_factor_values"    destination="dynamic-k8s-small" resources="all" />
+    <tool id="study_factors"          destination="dynamic-k8s-small" resources="all" />
+
+    <!--
+    <tool id="data_files" destination="container-mtblisa"/>
+    <tool id="factors_summary" destination="container-mtblisa"/>
     <tool id="get_study" destination="container-mtblisa"/>
     <tool id="get_study_json" destination="container-mtblisa"/>
     <tool id="study_factor_values" destination="container-mtblisa"/>
     <tool id="study_factors" destination="container-mtblisa"/>
-    <tool id="data_files" destination="container-mtblisa"/>
-    <tool id="factors_summary" destination="container-mtblisa"/>
+    -->
     <tool id="mtbls-factors-viz" destination="dynamic-k8s-small" resources="all"/>
     <tool id="isajson_validator" destination="container-isajson-validator"/>
     <tool id="isatab_validator" destination="container-isatab-validator"/>
