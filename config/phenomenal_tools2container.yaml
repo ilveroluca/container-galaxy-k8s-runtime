@@ -253,7 +253,7 @@ assignment:
   max_pod_retrials: 3
   tools_id:
   - mtbls520_01_mtbls_download
-  - mtbls520_02a_raw_extract
+  - 02a_raw_extract
   - mtbls520_02b_qc_extract
   - mtbls520_02_extract
   - mtbls520_03_quality_control

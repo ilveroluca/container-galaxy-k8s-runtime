@@ -286,7 +286,7 @@
   </section>
   <section name="Eco-Metabolomics" id="ecomet">
     <tool file="phenomenal/ecomet/mtbls520_01_mtbls_download.xml" labels="EcoMet"/>
-    <tool file="phenomenal/ecomet/mtbls520_02a_raw_extract.xml" labels="EcoMet"/>
+    <tool file="phenomenal/ecomet/02a_raw_extract.xml"/>
     <tool file="phenomenal/ecomet/mtbls520_02b_qc_extract.xml" labels="EcoMet"/>
     <tool file="phenomenal/ecomet/mtbls520_02_extract.xml" labels="EcoMet"/>
     <tool file="phenomenal/ecomet/mtbls520_03_quality_control.xml" labels="EcoMet"/>
